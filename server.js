@@ -1,6 +1,6 @@
 // Add packages and create server
 const express = require('express');
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 80;
 const app = express();
 const http = require('http');
 const server = http.createServer(app);

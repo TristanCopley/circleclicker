@@ -38,8 +38,8 @@ c.width = window.innerWidth; c.height = window.innerHeight;
 // Variable declaration
 let previousX = 0;
 let previousY = 0;
-let cursorX = -125.5; // -125.5 centers the cursor in-between the 4x4 circle grid let cursorY = -125.5;
-let cursorY = -125.5;
+let cursorX = -62.75; // -125.5 centers the cursor in-between the 4x4 circle grid let cursorY = -125.5;
+let cursorY = -62.75;
 let circles = [[ // Adds one circle at the start
     Math.floor(Math.random() * 4) * 125 - 250, Math.floor(Math.random() * 4) * 125 - 250
 ]];
@@ -96,7 +96,7 @@ function animate(timeStamp = 0) { // CLEAR CANVAS //
 
     let timeTxt1 = `Time: ${Math.floor((Math.round(parseInt(timeStamp) / 1000)) / 60).toString(10).padStart(2, '0')}`;
     let timeTxt2 = `:${((Math.round(parseInt(timeStamp) / 1000)) % 60).toString(10).padStart(2, '0')}`;
-    ctx.fillText(scoreTxt + accuracyTxt + timeTxt1 + timeTxt2, c.width / 2, 75); ctx.font = 'bold 35px Courier New';
+    ctx.fillText(scoreTxt + accuracyTxt + timeTxt1 + timeTxt2, c.width / 2, 50); ctx.font = 'bold 35px Courier New';
     ctx.fillText(`Gridshot Unlimited by Tristan Copley`, c.width / 2, c.height - 25); // CALLBACK AFTER FRAME COMPLETION //
     requestAnimationFrame( animate );
 
